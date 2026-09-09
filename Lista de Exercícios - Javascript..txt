@@ -1,0 +1,19 @@
+Verificador de Par ou Ímpar (Variáveis, If/Else): Crie um código que verifique se um número armazenado em uma variável é par ou ímpar e exiba a resposta no console.
+
+Nome do Mês (Variáveis, Switch): Dado um número de 1 a 12, use um switch para imprimir o nome do mês correspondente. Imprima "Mês inválido" se estiver fora desse intervalo.
+
+Multiplicador de Array (Array, For): Dado um array de números, crie um laço for que multiplique cada valor por 2 e imprima o resultado.
+
+Contagem Regressiva (While): Use um laço while para imprimir uma contagem regressiva de 10 até 0. Ao chegar em 0, imprima "Fogo!".
+
+Função de Saudação (Função, If/Else): Crie uma função que receba uma hora do dia (0-23) e retorne "Bom dia", "Boa tarde" ou "Boa noite".
+
+Somar Elementos (Função, Array, For, Variáveis): Crie uma função que receba um array de números e retorne a soma total de todos os elementos.
+
+Encontrar Número Específico (Array, While, If/Else): Use um while para percorrer um array e procurar o número 50. Se encontrar, pare o laço e imprima "Encontrado no índice: X".
+
+Calculadora Básica (Função, Switch, Variáveis): Crie uma função que receba dois números e um operador lógico em texto ("+", "-", "*", "/") e use um switch para calcular e retornar o resultado da operação.
+
+Filtrar Números Positivos (Função, Array, For, If/Else): Crie uma função que receba um array misto com números positivos e negativos e retorne um novo array contendo apenas os números positivos.
+
+Máquina de Vendas (Integração Total): Crie uma função que processe uma lista (array) de pedidos de uma máquina, representados por códigos numéricos. Use um for para ler o array, um switch para definir o preço de cada produto escolhido e um if/else no final para aplicar 10% de desconto no valor total caso a compra ultrapasse R$ 20,00. Imprima o valor final.
