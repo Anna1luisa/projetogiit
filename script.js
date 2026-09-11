@@ -1,43 +1,49 @@
+// Pega o botão e a área de usuários pelo ID (ligação HTML + JS)
 const botao = document.getElementById("btnCarregar");
-const container = document.getElementById("usuarios");
+const recipiente = document.getElementById("usuarios");
 
+// Escuta o evento de clique no botão e chama a função
 botao.addEventListener("click", carregarUsuarios);
 
+// Função assíncrona - permite usar await sem travar a página
 async function carregarUsuarios() {
-
-    container.innerHTML = "Carregando...";
-
+    // Mostra mensagem enquanto busca na API
+    recipiente.innerHTML = "Carregando...";
+    
     try {
-
-        const resposta = await fetch(
-            "https://jsonplaceholder.typicode.com/users"
-        );
-
+        // fetch() busca dados na API fake
+        const resposta = await fetch("https://jsonplaceholder.typicode.com/users");
+        
+        // .json() converte a resposta de texto para objeto JavaScript
         const usuarios = await resposta.json();
+        
+        // Limpa o "Carregando..."
+        recipiente.innerHTML = "";
 
-        container.innerHTML = "";
-
+        // forEach percorre cada usuário do array
         usuarios.forEach(usuario => {
-
-            const card = document.createElement("div");
-
-            card.classList.add("usuario");
-
-            card.innerHTML = `
+            // Cria uma div na memória
+            const cartao = document.createElement("div");
+            
+            // Adiciona a classe CSS 'usuario' (fundo branco, sombra)
+            cartao.classList.add("usuario");
+            
+            // innerHTML escreve o conteúdo dentro do cartão
+            // ${} é interpolação para colocar variável dentro do texto
+            cartao.innerHTML = `
                 <h2>${usuario.name}</h2>
-                <p><strong>Email:</strong> ${usuario.email}</p>
+                <p><strong>E-mail:</strong> ${usuario.email}</p>
                 <p><strong>Telefone:</strong> ${usuario.phone}</p>
                 <p><strong>Cidade:</strong> ${usuario.address.city}</p>
             `;
-
-            container.appendChild(card);
+            
+            // appendChild joga o cartão criado dentro da seção, aparece na tela
+            recipiente.appendChild(cartao);
         });
 
     } catch (erro) {
-
-        container.innerHTML =
-            "Não foi possível carregar os usuários.";
-
-        console.error(erro);
+        // Se der erro (sem internet, API fora), entra aqui
+        recipiente.innerHTML = "Não foi possível carregar os usuários.";
+        console.error(erro); // Mostra o erro no F12 > Console para debug
     }
 }
