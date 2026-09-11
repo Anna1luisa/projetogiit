@@ -1,45 +1,68 @@
-* {
-    box-sizing: border-box;
+/* Aplica em tudo - remove diferença de tamanho entre navegadores */
+* { 
+    box-sizing: border-box; 
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 40px;
+/* Estilo do corpo da página */
+body { 
+    font-family: Arial, sans-serif; /* Fonte */
+    background-color: #f2f2f2; /* Fundo cinza claro */
+    margin: 0; 
+    padding: 40px; /* Espaço nas bordas */
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
+/* Container que centraliza o conteúdo */
+.container { 
+    max-width: 900px; /* Largura máxima */
+    margin: auto; /* Centraliza no meio da tela */
 }
 
-h1 {
-    text-align: center;
+/* Título principal */
+h1 { 
+    text-align: center; /* Centralizado */
 }
 
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+/* Botão Carregar usuários */
+button { 
+    display: block; 
+    margin: 20px auto; /* Centraliza o botão */
+    padding: 12px 20px; /* Espaço interno */
+    border: none; 
+    border-radius: 6px; /* Borda arredondada */
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+    background-color: #007bff; /* Azul */
+    color: white; /* Texto branco */
+    font-size: 16px;
 }
 
-.usuarios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
 }
 
-.usuario {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Grade onde os cartões ficam - 3 colunas */
+.usuarios { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px; /* Espaço entre os cartões */
 }
 
-.usuario h2 {
-    margin-top: 0;
+/* Cada cartão de usuário */
+.usuario { 
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Nome do usuário dentro do cartão */
+.usuario h2 { 
+    margin-top: 0; 
+    font-size: 18px;
+    color: #333;
+}
+
+/* Texto de e-mail, telefone, cidade */
+.usuario p {
+    margin: 5px 0;
+    color: #555;
 }
